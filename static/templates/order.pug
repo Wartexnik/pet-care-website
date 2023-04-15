@@ -1,0 +1,71 @@
+extends base
+
+block content
+    <div class="container-fluid" id="order-content">
+    <h2>Ready to give your pet the love and care they deserve?</h2>
+    <p>Fill out our quick and easy form to provide us with all the essential details we need to pamper your pet and book the perfect service.</p>
+    <div class="card card-body">
+    h4 1. Owner
+    if !session.logged_in
+        h5 First, we'll need your details
+        <button class="btn-primary" id="order-signup">Join Pawsome!</button>
+    else
+        h5= session.name + " - Logged In!"
+    div.row.g-0.collapse#pet-row(class=session.logged_in? 'show':undefined)
+        hr
+        h4 2. Pet
+        h5 Next, provide the details for your pet
+        <div class="col form-floating">
+            <input type="text" class="form-control ui-autocomplete-input" id="pet-name" placeholder="Enter pet name" autocomplete="off">
+            <label for="pet-name">Pet Name</label>
+        </div>
+        <div class="btn-toolbar" role="group" id="pet-types">
+            each petType in petTypes
+                input.btn-check(type="radio" data-pet-type-id=petType.id data-pet-type-price=petType.price_mod name="pet-types" id="pet-type-" + petType.id autocomplete="off")
+                label.btn.btn-outline-primary(for="pet-type-" + petType.id)
+                    | #{petType.name}
+                    hr
+                    | +₴#{(petType.price_mod / 100).toFixed()}
+        </div>
+    <div class="row g-0 collapse" id="service-row">
+        hr
+        h4 3. Service
+        h5 Finally, select a service for your pet
+        <div class="btn-toolbar" role="group" id="services">
+            each service in services
+                input.btn-check(type="radio" data-service-id=service.id data-service-price=service.base_price name="services" id="service-" + service.id autocomplete="off")
+                label.btn.btn-outline-primary(for="service-" + service.id)
+                    | #{service.name}
+                    hr
+                    | +₴#{(service.base_price / 100).toFixed()}
+        </div>
+    </div>
+    <div class="g-0 collapse" id="optional-row">
+        hr
+        h4 4. (Optional)
+        h5 Here you can fill in some extra info
+        <div class="col form-floating">
+            <input class="form-control ui-autocomplete-input" id="phone" type="tel" maxlength="15" placeholder="(XXX) XXX-XXXX" />
+            <label for="phone">Phone Number</label>
+        </div>
+        <div class="col form-floating">
+            <input type="text" class="form-control ui-autocomplete-input" id="comments" placeholder="Enter your comments" autocomplete="off">
+            <label for="comments">Additional Comments</label>
+        </div>
+        
+    </div>
+    
+    <div class="row g-0 collapse" id="price-row" style="">
+        <hr>
+        <div class="col d-flex justify-content-end bold">
+            <h5 id="total-price">Total: ₴ 0.00</h5>
+        </div>
+    </div>
+    </div>
+    <div class="d-flex justify-content-end">
+        <div class="spinner-border text-primary collapse" role="status" id="spinner-pay">
+        </div>
+        <button type="submit" class="btn-primary col-6 col-md-3 collapse" id="btn-pay" data-trip-id="1" data-station-start="1" data-station-end="3">Pay</button>
+    </div>
+    </div>
+    </div>

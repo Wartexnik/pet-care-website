@@ -1,0 +1,17 @@
+extends base
+block content
+    h1= service.name
+    <div class="container-fluid" id="service-content">
+        img#service-img(src= service.img_path)
+        <a href="/order">
+        <button class="btn-primary rounded service-makeappointment">Make Appointment</button>
+        </a>
+        p#service-description !{service.description_long.replace(/\n/g, () => `<br><br><img class="random-animal" src="${randomAnimals[Math.floor(Math.random() * randomAnimals.length)]}" /><br>`)}
+        <a href="/order">
+        <button class="btn-primary rounded service-makeappointment">Make Appointment</button>
+        </a>
+    </div>
+    <div class="container">
+        <img id="footer-img" src="/resources/footer-img.png" alt="">
+    </div>
+    

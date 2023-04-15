@@ -1,0 +1,24 @@
+extends base
+
+block content
+    <main class="container-fluid" id="my-orders-content">
+    <h1>My orders</h1>
+    <table class="table table-hover">
+    <thead>
+        <tr>
+        <th scope="col">#</th>
+        <th scope="col">Service</th>
+        <th scope="col">Pet</th>
+        <th scope="col">Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        each order in orders
+            tr
+                td= order.id
+                td= order.service_name
+                td= order.pet
+                td= order.comments
+    </tbody>
+    </table>
+    </main>

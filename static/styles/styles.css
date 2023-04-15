@@ -1,0 +1,233 @@
+* {
+    font-weight: 500;
+}
+
+body {
+    background-color: #FEF9F3;
+}
+
+.navbar-nav > li {
+    padding-right: 20px;
+}
+
+.navbar {
+    padding: 10px 0 0 0;
+}
+
+img {
+    height: auto;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+#logo {
+    height: calc(1.525rem + 1vw);
+    width: auto;
+    margin: 0px 5px 5px 0px;
+}
+
+.navbar, #home-content, #service-content, #order-content, #my-orders-content, #profile-content {
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+#footer-content {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+#slogan {
+    margin-top: 40px;
+    font-family: 'Rowdies', cursive;
+    font-weight: 400;
+    font-size: calc(1.525rem + 3.3vw);
+    text-align: justify;
+}
+
+.navbar-brand {
+    font-family: 'Rowdies', cursive;
+    font-weight: 400;
+    font-size: calc(1.525rem + 1vw);
+}
+
+#landing-page-img {
+    padding: 20px;
+}
+
+.dropdown-item:active {
+    background-color: #FEF9F3;
+    color: black;
+}
+
+.btn-primary {
+    padding: 10px 20px 10px 20px;
+}
+
+.btn-primary:hover {
+    box-shadow: 4px 5px 0px -1px rgba(0, 0, 0, 1);
+    transform: translateY(-0.25em);
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background-color: #FFEA9F;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rowdies', cursive;
+}
+
+footer {
+    background-color: #FFF3DD;
+    padding: 3vh 0;
+}
+
+#footer-img {
+    transform: translateY(10%);
+}
+
+#home-content {
+    background-color: #FEF9F3;
+}
+
+.navbar {
+    background-color: #FEF9F3;
+}
+
+.bg-transparent {
+    background-color: transparent;
+}
+
+.card {
+    box-shadow: 0 0 5px rgb(0 0 0 / 0.2);
+    margin: 10px 0
+}
+
+.data-card:hover {
+    box-shadow: 4px 5px 0px -1px rgba(0, 0, 0, 1);
+    transform: translateY(-0.25em);
+}
+
+.data-card {
+    border: 2px solid;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+#carouselServices {
+    max-width: 750px;
+    margin: auto;
+}
+
+.carousel {
+    text-align: center;
+}
+
+.carousel-control-prev-icon {
+ background-image: url("/resources/left-arrow.png") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("/resources/right-arrow.png") !important;
+}
+
+.carousel-control-prev {
+    transform: translateX(-8vw);
+}
+
+.carousel-control-next {
+    transform: translateX(8vw);
+}
+
+a {
+    color: var(--bs-body-color)
+}
+
+#btn-login, #btn-signup {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: justify;
+}
+
+.random-animal {
+    display: block;
+    height: 100px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#service-description, #about-content {
+    max-width: 500px;
+    margin: auto;
+}
+
+#service-img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.service-makeappointment {
+    display: block;
+    margin: 20px auto 20px auto;
+}
+
+.btn-toolbar>label {
+    margin: 16px;
+}
+
+#pet-types, #services, .form-floating {
+    margin: 16px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+#btn-pay {
+    margin: 0 0 20px 0;
+}
+
+#spinner-pay {
+    margin: 0 10px 0 0
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0;
+}
+
+#service-content {
+    text-align: center;
+}
+
+#btn-update-profile {
+    margin: 20px;
+}
+
+img {
+    max-width: 100%
+}

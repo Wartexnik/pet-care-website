@@ -1,0 +1,33 @@
+extends base
+
+block content
+    <main class="container-fluid" id="profile-content">
+        <h1>Profile</h1>
+        <h2>My details</h2>
+        <form autocomplete="off" name="form-profile" id="form-profile">
+            <div class="row">
+                <div class="form-group col-12">
+                    <label for="name">Name</label>
+                    input(type="text", class="form-control", id="name", name="name", placeholder="Enter your new name", value=session.name)
+                    <label for="name">Phone</label>
+                    input(type="tel", class="form-control", id="phone", name="phone", placeholder="Enter your new phone number", value=session.phone, maxlength="15")
+                </div>
+                <button type="submit" class="btn-primary col-12 col-sm-6 col-md-3 ms-auto" id="btn-update-profile">Save</button>
+            </div>
+        </form>
+        <h2>My pets</h2>
+        <table class="table table-hover">
+        <thead>
+            <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            each pet in pets
+                tr
+                    td= pet.name
+                    td= pet.PetType.name
+        </tbody>
+        </table>
+    </main>

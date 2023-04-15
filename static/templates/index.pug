@@ -1,0 +1,45 @@
+extends base
+
+block content
+    <main class="container-fluid" id="home-content">
+        <div class="row">
+            <div class="col-sm-7">
+                <h1 id="slogan">Complete Pet Care & Training Solution</h1>
+                <p id="description">Enriching the lives of pets through exceptional care and attention.</p>
+                <a href="/order">
+                <button class="btn-primary rounded">Make Appointment</button>
+                </a>
+            </div>
+            <div class="col-sm-5">
+            <img id="landing-page-img" class="img-responsive" src="/resources/landing-page-img.png" alt="">
+            </div>
+        </div>
+        
+        <h1 class="text-center">Our Services</h1>
+
+        #carouselServices.carousel.slide(data-bs-ride="carousel")
+            .carousel-inner
+                each service, index in services
+                    .carousel-item.container-fluid(class=index === 0 ? 'active' : '')
+                        .p-2
+                            .data-card
+                                img(src= service.img_path).w-50
+                                h2= service.name
+                                p= service.description_short
+                                a(href=`/services/${service.slug}`)
+                                    button.btn-primary.rounded.navbar-btn Learn More
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselServices" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselServices" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+            </button>
+
+        <div class="container">
+            <img id="footer-img" src="/resources/footer-img.png" alt="">
+        </div>
+    </main>
